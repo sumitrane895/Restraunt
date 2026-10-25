@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 300" role="img" aria-label="Gulab jamun sundae">
+    <rect width="352" height="300" rx="22" fill="#ead7c3"/>
+    <circle cx="176" cy="166" r="118" fill="#fff" opacity=".22"/>
+    <path d="M0 255 Q85 220 164 255 T352 245 V300 H0Z" fill="#fff" opacity=".16"/>
+    <ellipse cx="176" cy="239" rx="100" ry="13" fill="#55452e" opacity=".12"/>
+    <path d="M107 165 Q176 190 245 165 L228 218 Q176 247 124 218Z" fill="#fff6e8" stroke="#c8b6a0" stroke-width="3"/>
+        <circle cx="151" cy="160" r="29" fill="#f4e8c8"/><circle cx="194" cy="153" r="30" fill="#f4e8c8"/>
+        <circle cx="149" cy="174" r="18" fill="#8e4d2f"/><circle cx="201" cy="173" r="18" fill="#8e4d2f"/>
+        <path d="M127 139 Q150 122 170 140 M174 132 Q198 117 216 138" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+    <text x="176" y="278" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#344334">GULAB JAMUN SUNDAE</text>
+    </svg>

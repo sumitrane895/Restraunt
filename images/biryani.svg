@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 300" role="img" aria-label="Vegetable biryani">
+    <rect width="352" height="300" rx="22" fill="#e7d2a5"/>
+    <circle cx="176" cy="166" r="118" fill="#fff" opacity=".22"/>
+    <path d="M0 255 Q85 220 164 255 T352 245 V300 H0Z" fill="#fff" opacity=".16"/>
+    <ellipse cx="176" cy="239" rx="100" ry="13" fill="#55452e" opacity=".12"/>
+    <ellipse cx="176" cy="176" rx="84" ry="56" fill="#f7e8c7" stroke="#c4ac83" stroke-width="4"/>
+        <ellipse cx="176" cy="166" rx="70" ry="43" fill="#bd7734"/>
+        <g stroke="#f7d995" stroke-width="4" stroke-linecap="round"><path d="M128 147 l18 8 M155 179 l21 -10 M194 143 l20 9 M183 191 l22 7 M145 194 l12 -7 M211 169 l13 -4"/></g>
+        <g fill="#4b7c45"><circle cx="145" cy="165" r="7"/><circle cx="196" cy="177" r="7"/><circle cx="173" cy="145" r="6"/></g><g fill="#4b7c45">
+          <ellipse cx="176" cy="153" rx="9" ry="5" transform="rotate(-25 176 153)"/>
+          <ellipse cx="221" cy="193" rx="8" ry="5" transform="rotate(28 221 193)"/>
+          <ellipse cx="139" cy="214" rx="7" ry="4" transform="rotate(-45 139 214)"/>
+          <circle cx="205" cy="129" r="4"/><circle cx="146" cy="179" r="4"/>
+        </g>
+    <text x="176" y="278" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#344334">VEGETABLE BIRYANI</text>
+    </svg>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the menu, chef's specials, and guest reviews at The Spice Table." />
+  <title>The Spice Table | Restaurant & Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#20231f;--muted:#777b72;--cream:#f8f5ed;--paper:#fffdf8;--green:#244d3a;--lime:#d5e6a6;--orange:#d76a3d;--line:#e7e2d7}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif}
+    a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{font-size:12px;letter-spacing:.08em;background:var(--green);color:#fff;padding:10px 0}.topbar .wrap{display:flex;justify-content:space-between;gap:12px}
+    header{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+    nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:19px;letter-spacing:-.03em}.brand-mark{display:grid;place-items:center;background:var(--orange);color:white;width:39px;height:39px;border-radius:50%;font-family:"Playfair Display",serif;font-size:21px}
+    .navlinks{display:flex;gap:28px;font-size:14px;color:#565b53}.navlinks a:hover{color:var(--orange)}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:13px 19px;border:0;border-radius:999px;background:var(--green);color:#fff;font-weight:700;font-size:13px;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px);background:#173b2a}.btn.light{background:var(--lime);color:var(--green)}.btn.outline{background:transparent;border:1px solid #aeb6a8;color:var(--green)}
+    .hero{padding:58px 0 66px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1fr 1.04fr;gap:55px;align-items:center}
+    .eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.19em;color:var(--orange);font-weight:700;display:flex;align-items:center;gap:9px}.eyebrow:before{content:"";width:25px;height:1px;background:currentColor}
+    h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:"Playfair Display",serif;font-weight:600;letter-spacing:-.035em}h1{font-size:clamp(44px,5.7vw,76px);line-height:1.02;margin:19px 0 20px}h1 em{color:var(--orange);font-weight:500}.hero p{color:var(--muted);font-size:16px;line-height:1.8;max-width:475px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:27px 0 28px}
+    .mini-proof{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted)}.avatars{display:flex}.avatars span{display:grid;place-items:center;width:29px;height:29px;border-radius:50%;border:2px solid var(--cream);background:#d9b49a;margin-left:-7px;font-size:12px}.avatars span:first-child{margin-left:0;background:#9eb5a0}.avatars span:last-child{background:#e6c77b}
+    .hero-art{position:relative;min-height:470px}.hero-photo{position:absolute;inset:0 18px 25px 24px;border-radius:48% 48% 22px 22px;overflow:hidden;background:#d8c5a7}.hero-photo img{width:100%;height:100%;object-fit:cover}.photo-stamp{position:absolute;left:0;bottom:0;background:var(--lime);color:var(--green);border-radius:50%;width:125px;height:125px;display:grid;place-items:center;text-align:center;transform:rotate(-10deg);font-size:12px;line-height:1.45;font-weight:700;padding:16px}.photo-stamp strong{font-family:"Playfair Display",serif;font-size:25px;display:block}.rating-card{position:absolute;right:0;top:48px;background:var(--paper);padding:16px 18px;border-radius:14px;box-shadow:0 15px 40px #263b2818;font-size:12px}.stars{color:#d17a36;letter-spacing:2px}.rating-card strong{display:block;font-size:20px;margin:4px 0}
+    .section{padding:78px 0}.section.white{background:var(--paper)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}.section-head h2{font-size:clamp(32px,4vw,48px);margin:10px 0 0}.section-head p{color:var(--muted);max-width:390px;line-height:1.7;margin-bottom:4px}
+    .categories{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 26px}.chip{border:1px solid var(--line);border-radius:99px;background:transparent;padding:10px 17px;font-size:12px;font-weight:700;color:#62675e;cursor:pointer}.chip.active,.chip:hover{background:var(--green);border-color:var(--green);color:#fff}
+    .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}.dish{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.2s}.dish:hover{transform:translateY(-4px);box-shadow:0 14px 35px #263b2810}.dish-img{height:205px;position:relative;overflow:hidden;background:#e8dfd0}.dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.dish:hover img{transform:scale(1.04)}.tag{position:absolute;top:13px;left:13px;border-radius:99px;background:var(--lime);color:var(--green);font-size:10px;font-weight:700;padding:7px 10px}.dish-body{padding:19px}.dish-title{display:flex;align-items:start;justify-content:space-between;gap:10px}.dish h3{font-size:22px;margin:0 0 9px}.price{font-weight:700;color:var(--orange);white-space:nowrap}.dish p{color:var(--muted);font-size:13px;line-height:1.65;min-height:42px;margin-bottom:15px}.dish-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:13px;font-size:11px;color:var(--muted)}.veg{display:inline-flex;align-items:center;gap:5px}.veg i{width:10px;height:10px;border:1.5px solid #3b8c51;display:inline-grid;place-items:center}.veg i:after{content:"";width:4px;height:4px;background:#3b8c51;border-radius:50%}
+    .special{background:var(--green);color:#fff;border-radius:25px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}.special-copy{padding:clamp(28px,5vw,62px)}.special .eyebrow{color:var(--lime)}.special h2{font-size:clamp(35px,4vw,52px);line-height:1.1;margin:17px 0}.special p{color:#d2d9d0;line-height:1.8;font-size:14px;max-width:430px}.special-meta{display:flex;gap:24px;margin:25px 0;font-size:12px;color:#d2d9d0}.special-meta strong{display:block;color:#fff;font-size:16px;margin-top:4px}.special-photo{min-height:400px}.special-photo img{width:100%;height:100%;object-fit:cover}
+    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.review{background:var(--cream);border:1px solid var(--line);border-radius:17px;padding:25px}.review .stars{font-size:13px}.review blockquote{margin:15px 0 22px;font-family:"Playfair Display",serif;font-size:20px;line-height:1.45}.reviewer{display:flex;align-items:center;gap:11px;font-size:12px;font-weight:700}.reviewer .face{display:grid;place-items:center;width:38px;height:38px;background:#e8c9a8;border-radius:50%;font-size:17px}.reviewer small{display:block;font-weight:400;color:var(--muted);margin-top:3px}
+    .visit-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:start}.visit h2{font-size:44px;margin:12px 0}.visit p{color:var(--muted);line-height:1.8}.info-row{display:flex;gap:13px;margin:22px 0;font-size:13px}.info-icon{width:38px;height:38px;display:grid;place-items:center;background:var(--lime);border-radius:50%;flex-shrink:0}.info-row strong{display:block;margin-bottom:5px}.booking{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px}.booking h3{font-size:27px;margin-bottom:7px}.booking>p{color:var(--muted);font-size:13px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px;margin:5px 0 10px}.field label{font-size:11px;font-weight:700;color:#60665c}.field input,.field select,.field textarea{border:1px solid var(--line);border-radius:10px;padding:12px;background:#fffdf8;outline:none;width:100%;font-size:13px}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green)}.field.full{grid-column:1/-1}.booking .btn{width:100%;margin-top:5px}.form-note{font-size:11px;color:var(--muted);margin:12px 0 0;text-align:center}
+    footer{background:#172d22;color:#d7dfd6;padding:28px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:12px}.footer-brand{color:#fff;font-weight:700;font-size:16px}.footer-links{display:flex;gap:18px}
+    .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(120px);background:#172d22;color:white;padding:14px 20px;border-radius:12px;box-shadow:0 10px 30px #0003;z-index:10;transition:.3s;font-size:13px;max-width:calc(100% - 30px)}.toast.show{transform:translateX(-50%) translateY(0)}
+    @media(max-width:850px){.navlinks{gap:14px}.hero-grid{gap:25px}.hero-art{min-height:390px}.menu-grid{grid-template-columns:repeat(2,1fr)}.reviews{grid-template-columns:1fr}.review{padding:21px}.visit-grid{gap:25px}}
+    @media(max-width:620px){.wrap{width:min(100% - 28px,1160px)}.topbar .wrap span:last-child{display:none}nav{height:68px}.navlinks{display:none}.brand{font-size:17px}.hero{padding:36px 0 45px}.hero-grid{grid-template-columns:1fr}.hero-art{min-height:360px;grid-row:1}.hero-photo{inset:0 20px 18px 18px}.photo-stamp{width:100px;height:100px;font-size:10px}.photo-stamp strong{font-size:21px}.rating-card{top:24px;padding:12px}.section{padding:55px 0}.section-head{display:block}.section-head p{margin-top:14px}.menu-grid{grid-template-columns:1fr}.dish-img{height:225px}.special{grid-template-columns:1fr}.special-photo{min-height:250px;grid-row:1}.special-copy{padding:28px}.visit-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-row{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><span>FRESH INGREDIENTS · MADE WITH HEART</span><span>Open today: 12:00 PM – 11:00 PM &nbsp; | &nbsp; Dine-in · Takeaway</span></div></div>
+  <header><nav class="wrap">
+    <a class="brand" href="#home"><img src="images/restaurant-logo.png" alt="The Spice Table logo" style="width:42px;height:42px;object-fit:cover;border-radius:50%"><span>The Spice Table</span></a>
+    <div class="navlinks"><a href="#menu">Menu</a><a href="#special">Chef's special</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#visit">Find us</a></div>
+    <a class="btn" href="#visit">Book a table ↗</a>
+  </nav></header>
+  <main>
+    <section class="hero" id="home"><div class="wrap hero-grid">
+      <div><div class="eyebrow">Good food. Good mood.</div><h1>A little spice,<br>a lot of <em>love.</em></h1>
+        <p>Comforting favourites, fresh ingredients, and bold flavours made for sharing. Come hungry, leave happy.</p>
+        <div class="hero-actions"><a class="btn" href="#menu">Explore our menu ↓</a><a class="btn outline" href="#special">Meet the chef's pick</a></div>
+        <div class="mini-proof"><div class="avatars"><span>😊</span><span>🍽️</span><span>❤️</span></div><span><strong>4.8/5 guest love</strong> · made fresh every day</span></div>
+      </div>
+      <div class="hero-art"><div class="hero-photo"><img src="images/restaurant-interior.png" alt="Warm, inviting restaurant interior"></div><div class="photo-stamp"><div><strong>100%</strong>fresh & flavourful</div></div><div class="rating-card"><span class="stars">★★★★★</span><strong>4.8 / 5</strong><span>Guest favourite</span></div></div>
+    </div></section>
+
+    <section class="section white" id="menu"><div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Made fresh, served warm</div><h2>Explore the menu</h2></div><p>From small bites to satisfying mains, find your next favourite. Prices and dishes below are sample content you can customise.</p></div>
+      <div class="categories" role="group" aria-label="Filter menu">
+        <button class="chip active" data-filter="all">All dishes</button><button class="chip" data-filter="starters">Starters</button><button class="chip" data-filter="mains">Main course</button><button class="chip" data-filter="drinks">Drinks</button><button class="chip" data-filter="desserts">Desserts</button>
+      </div>
+      <div class="menu-grid" id="menuGrid">
+        <article class="dish" data-category="starters"><div class="dish-img"><img loading="lazy" src="images/samosa.png" alt="Crispy samosas"><span class="tag">Bestseller</span></div><div class="dish-body"><div class="dish-title"><h3>Punjabi Samosa</h3><span class="price">₹129</span></div><p>Crisp golden pastry filled with spiced potato and peas, served with chutneys.</p><div class="dish-foot"><span class="veg"><i></i> Vegetarian</span><span>⏱ 12 min</span></div></div></article>
+        <article class="dish" data-category="starters"><div class="dish-img"><img loading="lazy" src="images/paneer-tikka.png" alt="Paneer curry starter"><span class="tag">Guest favourite</span></div><div class="dish-body"><div class="dish-title"><h3>Paneer Tikka</h3><span class="price">₹249</span></div><p>Smoky paneer cubes marinated in yoghurt, herbs and house spices.</p><div class="dish-foot"><span class="veg"><i></i> Vegetarian</span><span>⏱ 18 min</span></div></div></article>
+        <article class="dish" data-category="mains"><div class="dish-img"><img loading="lazy" src="images/paneer-curry.png" alt="Indian curry with naan"><span class="tag">Chef's pick</span></div><div class="dish-body"><div class="dish-title"><h3>Paneer Curry</h3><span class="price">₹299</span></div><p>Paneer pieces simmered in a rich, creamy curry with a fragrant spice blend.</p><div class="dish-foot"><span class="veg"><i></i> Vegetarian</span><span>⏱ 22 min</span></div></div></article>
+        <article class="dish" data-category="mains"><div class="dish-img"><img loading="lazy" src="images/veg-thali.png" alt="Indian thali"><span class="tag">Filling favourite</span></div><div class="dish-body"><div class="dish-title"><h3>Royal Veg Thali</h3><span class="price">₹349</span></div><p>A complete meal with seasonal sabzi, dal, rice, roti, salad and dessert.</p><div class="dish-foot"><span class="veg"><i></i> Vegetarian</span><span>⏱ 20 min</span></div></div></article>
+        <article class="dish" data-category="drinks"><div class="dish-img"><img loading="lazy" src="images/cooler.png" alt="Refreshing fruit drink"><span class="tag">Refreshing</span></div><div class="dish-body"><div class="dish-title"><h3>Seasonal Cooler</h3><span class="price">₹119</span></div><p>A chilled, fruity house drink with fresh citrus and a hint of mint.</p><div class="dish-foot"><span>Made to order</span><span>⏱ 5 min</span></div></div></article>
+        <article class="dish" data-category="desserts"><div class="dish-img"><img loading="lazy" src="images/dessert.png" alt="Ice cream dessert"><span class="tag">Sweet ending</span></div><div class="dish-body"><div class="dish-title"><h3>Gulab Jamun Sundae</h3><span class="price">₹149</span></div><p>Warm gulab jamun paired with creamy vanilla ice cream and a nut crunch.</p><div class="dish-foot"><span>Contains dairy</span><span>⏱ 8 min</span></div></div></article>
+      </div>
+    </div></section>
+
+    <section class="section" id="special"><div class="wrap"><div class="special">
+      <div class="special-copy"><div class="eyebrow">Straight from our kitchen</div><h2>The chef's special.<br>Your new obsession.</h2><p>Fragrant basmati rice layered with chicken, aromatic spices, herbs and caramelised onions. Served with cooling raita.</p><div class="special-meta"><span>FROM<strong>₹279</strong></span><span>PREPARED<strong>Fresh to order</strong></span></div><a class="btn light" href="#visit">Ask about today's special ↗</a></div>
+      <div class="special-photo"><img loading="lazy" src="images/biryani.png" alt="Biryani served fresh"></div>
+    </div></div></section>
+
+
+    <section class="section" id="gallery"><div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">A place to gather</div><h2>More than a meal</h2></div><p>Thoughtful details, fresh cooking, and a warm setting for every visit.</p></div>
+      <div class="menu-grid">
+        <article class="dish"><div class="dish-img"><img loading="lazy" src="images/chef.png" alt="Chef preparing a dish in the kitchen"></div><div class="dish-body"><div class="dish-title"><h3>Made with care</h3></div><p>Every plate gets attention from our kitchen to your table.</p></div></article>
+        <article class="dish"><div class="dish-img"><img loading="lazy" src="images/dining-table.png" alt="Restaurant table set for dining"></div><div class="dish-body"><div class="dish-title"><h3>Set for good times</h3></div><p>A welcoming table for family dinners, friends, and celebrations.</p></div></article>
+        <article class="dish"><div class="dish-img"><img loading="lazy" src="images/restaurant-interior.png" alt="Warm restaurant interior"></div><div class="dish-body"><div class="dish-title"><h3>Relax and stay awhile</h3></div><p>Warm lighting and comfortable seating make every visit feel special.</p></div></article>
+      </div>
+    </div></section>
+
+    <section class="section white" id="reviews"><div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Kind words, full hearts</div><h2>What guests are saying</h2></div><p>Good food is even better when shared. Here's what guests love about their experience.</p></div>
+      <div class="reviews">
+        <article class="review"><div class="stars">★★★★★</div><blockquote>“The paneer was soft, the spices were balanced, and everything tasted freshly made.”</blockquote><div class="reviewer"><span class="face">🙂</span><span>Guest review<small>Dine-in experience</small></span></div></article>
+        <article class="review"><div class="stars">★★★★★</div><blockquote>“Lovely atmosphere and generous portions. The chef's special is worth trying!”</blockquote><div class="reviewer"><span class="face">😊</span><span>Guest review<small>Family dinner</small></span></div></article>
+        <article class="review"><div class="stars">★★★★★</div><blockquote>“A relaxed place to catch up with friends. The staff were warm and helpful.”</blockquote><div class="reviewer"><span class="face">😋</span><span>Guest review<small>Weekend visit</small></span></div></article>
+      </div>
+    </div></section>
+
+    <section class="section" id="visit"><div class="wrap visit-grid">
+      <div class="visit"><div class="eyebrow">Come say hello</div><h2>Your table is waiting.</h2><p>Planning a family dinner, a casual date, or a catch-up with friends? Send a reservation request and we'll get back to you.</p>
+        <div class="info-row"><span class="info-icon">⌖</span><div><strong>Find us</strong><span>Restaurant address goes here, Mumbai, Maharashtra</span></div></div>
+        <div class="info-row"><span class="info-icon">◷</span><div><strong>Opening hours</strong><span>Every day · 12:00 PM – 11:00 PM</span></div></div>
+        <div class="info-row"><span class="info-icon">☎</span><div><strong>Call us</strong><span>+91 98765 43210 (replace with your number)</span></div></div>
+      </div>
+      <form class="booking" id="bookingForm"><h3>Request a reservation</h3><p>Fill in your details. This demo will prepare a WhatsApp message for you.</p>
+        <div class="form-grid"><div class="field"><label for="guestName">YOUR NAME</label><input id="guestName" required placeholder="Full name"></div><div class="field"><label for="guestPhone">PHONE NUMBER</label><input id="guestPhone" required type="tel" placeholder="+91..." pattern="[+0-9 ()-]{8,}"></div><div class="field"><label for="guestDate">DATE</label><input id="guestDate" required type="date"></div><div class="field"><label for="guestTime">TIME</label><select id="guestTime"><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option><option>10:00 PM</option></select></div><div class="field"><label for="guestCount">GUESTS</label><select id="guestCount"><option>1 person</option><option selected>2 people</option><option>3 people</option><option>4 people</option><option>5 people</option><option>6+ people</option></select></div><div class="field"><label for="guestOccasion">OCCASION</label><select id="guestOccasion"><option>Casual dining</option><option>Birthday</option><option>Family dinner</option><option>Date night</option><option>Other</option></select></div></div>
+        <button class="btn" type="submit">Prepare WhatsApp request ↗</button><p class="form-note">Demo form — it does not save data or confirm a booking automatically.</p>
+      </form>
+    </div></section>
+  </main>
+  <footer><div class="wrap footer-row"><div><div class="footer-brand">The Spice Table</div><div style="margin-top:6px">Fresh flavours. Shared moments.</div></div><div class="footer-links"><a href="#menu">Menu</a><a href="#special">Chef's special</a><a href="#reviews">Reviews</a><a href="#visit">Contact</a></div><span>© <span id="year"></span> The Spice Table</span></div></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script>
+    const chips = document.querySelectorAll('.chip');
+    const dishes = document.querySelectorAll('.dish');
+    chips.forEach(chip => chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active')); chip.classList.add('active');
+      dishes.forEach(d => d.hidden = !(chip.dataset.filter === 'all' || d.dataset.category === chip.dataset.filter));
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const dateInput = document.getElementById('guestDate');
+    const today = new Date(); dateInput.min = new Date(today.getTime() - today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+    document.getElementById('bookingForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const val = id => document.getElementById(id).value;
+      const message = `Hello The Spice Table! I'd like to request a reservation.%0AName: ${encodeURIComponent(val('guestName'))}%0APhone: ${encodeURIComponent(val('guestPhone'))}%0ADate: ${encodeURIComponent(val('guestDate'))}%0ATime: ${encodeURIComponent(val('guestTime'))}%0AGuests: ${encodeURIComponent(val('guestCount'))}%0AOcassion: ${encodeURIComponent(val('guestOccasion'))}`;
+      // Replace 919876543210 below with the restaurant's WhatsApp number, including country code.
+      const restaurantWhatsApp = '919876543210';
+      if (restaurantWhatsApp === '919876543210') {
+        const toast = document.getElementById('toast');
+        toast.textContent = 'Demo ready! Replace the sample WhatsApp number in index.html with the restaurant number to send requests.';
+        toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 4500);
+      } else {
+        window.open(`https://wa.me/${restaurantWhatsApp}?text=${message}`, '_blank', 'noopener');
+      }
+    });
+  </script>
+</body>
+</html>

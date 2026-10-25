@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 300" role="img" aria-label="A fresh restaurant meal">
+    <rect width="352" height="300" rx="22" fill="#e6d5b8"/>
+    <circle cx="176" cy="166" r="118" fill="#fff" opacity=".22"/>
+    <path d="M0 255 Q85 220 164 255 T352 245 V300 H0Z" fill="#fff" opacity=".16"/>
+    <ellipse cx="176" cy="239" rx="100" ry="13" fill="#55452e" opacity=".12"/>
+    <ellipse cx="176" cy="177" rx="87" ry="64" fill="#fff8e9" stroke="#c9bba3" stroke-width="4"/>
+        <ellipse cx="176" cy="174" rx="67" ry="45" fill="#477b51"/>
+        <g fill="#e5a34e"><rect x="132" y="144" width="25" height="17" rx="6" transform="rotate(20 144 152)"/><rect x="177" y="170" width="28" height="17" rx="6" transform="rotate(-18 191 178)"/><rect x="151" y="192" width="24" height="15" rx="6" transform="rotate(12 163 199)"/><circle cx="207" cy="150" r="7"/><circle cx="138" cy="180" r="6"/></g><g fill="#e5a34e">
+          <ellipse cx="176" cy="153" rx="9" ry="5" transform="rotate(-25 176 153)"/>
+          <ellipse cx="221" cy="193" rx="8" ry="5" transform="rotate(28 221 193)"/>
+          <ellipse cx="139" cy="214" rx="7" ry="4" transform="rotate(-45 139 214)"/>
+          <circle cx="205" cy="129" r="4"/><circle cx="146" cy="179" r="4"/>
+        </g>
+    <text x="176" y="278" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#344334">A FRESH RESTAURANT MEAL</text>
+    </svg>
